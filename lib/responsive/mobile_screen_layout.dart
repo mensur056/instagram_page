@@ -31,7 +31,11 @@ class _MobileScreenLayoutState extends State<MobileScreenLayout> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      body: Center(child: Text('$userName')),
+      body: Center(child: Column(
+        children: [
+          Text('$userName'),Image.asset(name)
+        ],
+      )),
     );
   }
 }
