@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:instagram_copy/screens/sign_up_screen.dart';
+
+import 'package:instagram_page/screens/sign_up_screen.dart';
 
 import '../constants.dart';
-import '../resources/auth_methods.dart';
-import '../responsive/mobil_screen_layout.dart';
+import '../resource/auth_methods.dart';
+
+import '../responsive/mobile_screen_layout.dart';
 import '../responsive/responsive.dart';
 import '../responsive/web_screen_layout.dart';
 import '../utils/utils.dart';
-import '../widgets/text_field_input.dart';
-import 'home_screen.dart';
+import '../widgets/text_field.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -93,10 +94,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Container(
                   child: _isLoading
                       ? const Center(
-                    child: CircularProgressIndicator(
-                      color: Colors.white,
-                    ),
-                  )
+                          child: CircularProgressIndicator(
+                            color: Colors.white,
+                          ),
+                        )
                       : const Text('Log in'),
                   padding: const EdgeInsets.symmetric(vertical: 12),
                   alignment: Alignment.center,
