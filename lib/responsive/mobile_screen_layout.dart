@@ -10,28 +10,10 @@ class MobileScreenLayout extends StatefulWidget {
 }
 
 class _MobileScreenLayoutState extends State<MobileScreenLayout> {
-  String userName = '';
-
-  @override
-  void initState() {
-    super.initState();
-    getUsername();
-  }
-
-  void getUsername() async {
-    DocumentSnapshot snap = await FirebaseFirestore.instance
-        .collection('users')
-        .doc(FirebaseAuth.instance.currentUser!.uid)
-        .get();
-    setState(() {
-      userName = (snap.data() as Map<String, dynamic>)['userName'];
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      body: Center(child: Text('$userName')),
+    return const Scaffold(
+      body: Center(child: Text('This is mobile screen')),
     );
   }
 }
